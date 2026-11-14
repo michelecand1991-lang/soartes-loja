@@ -1,0 +1,8 @@
+.env
+.env.*
+*.pem
+*.key
+administracao/
+*admin-privado*
+*pedidos*.json
+*clientes*.csv
