@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: soartes-loja
+    runtime: static
+    buildCommand: echo "Site estatico SoArtes"
+    staticPublishPath: ./public
+    autoDeploy: true
