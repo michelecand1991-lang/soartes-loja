@@ -1,15 +1,6 @@
 name: ZIP de codigo-fonte - soartes
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/pacote-fonte-piloto.yml'
-      - 'public/**'
-      - 'README.md'
-      - 'render.yaml'
-  schedule:
-    - cron: '31 10 * * 1'
 permissions:
   contents: read
 jobs:
