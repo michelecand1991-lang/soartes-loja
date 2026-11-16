@@ -1,0 +1,38 @@
+name: ZIP de codigo-fonte - soartes
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pacote-fonte-piloto.yml'
+  schedule:
+    - cron: '31 10 * * 1'
+permissions:
+  contents: read
+jobs:
+  fonte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Montar ZIP de fonte
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/piloto/fonte
+          for item in public README.md render.yaml; do
+            if [ -e "$item" ]; then cp -a "$item" /tmp/piloto/fonte/; fi
+          done
+          find /tmp/piloto/fonte -type f \( -name '.env' -o -name '*.pem' -o -name '*.p12' -o -name '*secret*.json' -o -name '*credentials*.json' \) -delete
+          printf 'Projeto: soartes\nRepositorio: %s\nBranch: main\nCommit: %s\nGerado: %s\nObservacao: nao inclui dados de producao, segredos e backups.\n' "$GITHUB_REPOSITORY" "$(git rev-parse HEAD)" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > /tmp/piloto/MANIFESTO.txt
+          (cd /tmp/piloto/fonte && find . -type f -print0 | sort -z | xargs -0 -r sha256sum) > /tmp/piloto/SHA256SUMS.txt
+          (cd /tmp/piloto && zip -q -r "$GITHUB_WORKSPACE/soartes-fonte-piloto.zip" .)
+          unzip -t "soartes-fonte-piloto.zip" | tail -1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fonte-soartes-${{ github.run_number }}
+          path: soartes-fonte-piloto.zip
+          if-no-files-found: error
+          retention-days: 30
