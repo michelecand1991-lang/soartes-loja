@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/pacote-fonte-piloto.yml'
+      - 'public/**'
+      - 'README.md'
+      - 'render.yaml'
   schedule:
     - cron: '31 10 * * 1'
 permissions:
