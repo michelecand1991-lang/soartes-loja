@@ -32,9 +32,17 @@
 .campaign-image img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
 .campaign-image figcaption{position:absolute;bottom:8px;right:8px;border-radius:12px;padding:4px 8px;background:#101e34;color:white;font-size:11px}
 @media(max-width:760px){.campaign-grid{grid-template-columns:1fr}.campaign-grid h1{max-width:16ch}}
+
+#natal{scroll-margin-top:90px}
+.natal-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);align-items:center;gap:clamp(18px,4vw,46px);padding:clamp(20px,4vw,40px);border-radius:24px;background:#163a31;color:#fff}
+.natal-feature h2{color:#fff;margin:0 0 12px;font-size:clamp(29px,4vw,48px);line-height:1.05}
+.natal-feature p{color:#e5efe7;line-height:1.6;margin:0 0 20px}
+.natal-feature .btn{background:#f7e7c3;color:#163a31}
+.natal-feature img{width:100%;display:block;border-radius:14px;aspect-ratio:5/4;object-fit:contain;background:#dad5cb}
+@media(max-width:700px){.natal-feature{grid-template-columns:1fr}}
 </style></head><body><aside role="status" aria-label="Situação da plataforma" class="pilot-notice" style="padding:9px 15px;text-align:center;background:#f5f0ff;color:#32165a;border-bottom:1px solid #dbc8f1;font:600 13px/1.5 system-ui,Arial,sans-serif">VERSÃO PILOTO — Funcionalidades em validação. Antes de contratar, confirme as condições pelo atendimento oficial.</aside>
 <div class="top">SÓARTES DESIGN GRÁFICO · PERSONALIZADOS SOB ENCOMENDA · ATENDIMENTO ONLINE</div>
-<header><div class="wrap nav"><a class="brand" href="#">Só<span>Artes</span><small>DESIGN GRÁFICO</small></a><nav><a href="#produtos">Produtos</a><a href="#brindes">Brindes corporativos</a><a href="#como">Como funciona</a><a href="#arte">Criação de arte</a><a href="#frete">Entrega e frete</a><a href="#duvidas">Dúvidas</a></nav><div class="navActions"><button class="cart-btn" type="button" id="open-cart">Carrinho (<span id="cart-count">0</span>)</button><a class="btn" href="https://wa.me/5516981839138" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div></header>
+<header><div class="wrap nav"><a class="brand" href="#">Só<span>Artes</span><small>DESIGN GRÁFICO</small></a><nav><a href="#produtos">Produtos</a><a href="#natal">Natal</a><a href="#brindes">Brindes corporativos</a><a href="#como">Como funciona</a><a href="#arte">Criação de arte</a><a href="#frete">Entrega e frete</a><a href="#duvidas">Dúvidas</a></nav><div class="navActions"><button class="cart-btn" type="button" id="open-cart">Carrinho (<span id="cart-count">0</span>)</button><a class="btn" href="https://wa.me/5516981839138" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div></header>
 <section class="hero campaign-2027" aria-labelledby="campaign-title">
   <div class="wrap campaign-grid">
     <div>
@@ -51,7 +59,18 @@
     </figure>
   </div>
 </section>
-<main><section class="wrap section" id="produtos"><div class="flexhead"><div><div class="eyebrow">Catálogo SóArtes</div><h2>Impressos que valorizam sua marca</h2><p class="muted">Escolha quantidade e preparação de arte. Os preços são estimativas comerciais sujeitas à conferência antes do pagamento; o frete será cotado para seu CEP.</p></div><input class="search" id="search" placeholder="Buscar produto..." aria-label="Buscar produto"></div><div class="filters" id="filters"></div><div class="catalog-toolbar"><span id="catalog-count" class="catalog-status" aria-live="polite"></span><label>Organizar: <select id="sort-products"><option value="featured">Destaques</option><option value="alpha">Nome A–Z</option><option value="priced">Com preço primeiro</option><option value="quote">Sob consulta primeiro</option></select></label></div><div class="grid" id="catalog"></div><div class="trust-strip"><div><strong>Arte sob aprovação</strong>Arquivo revisado antes da produção.</div><div><strong>Frete confirmado</strong>Cálculo validado para o CEP antes do pagamento.</div><div><strong>Pedido acompanhado</strong>Atendimento humano durante a encomenda.</div></div><p class="hint">Imagens demonstrativas em alta definição, não fotografias de amostras fabricadas. Antes da compra, confirme especificações, materiais, personalização, quantidade mínima, prazo e frete.</p></section><section class="wrap section" id="brindes"><div class="eyebrow">Novidade · Soluções empresariais</div><div class="gift-feature"><div><div class="eyebrow">Brindes Corporativos SóArtes</div><h2>Sua marca presente em cada detalhe.</h2><p>Brindes para equipes, lembranças para clientes, eventos e ações de fim de ano. Personalização com a identidade da sua empresa, produção sob encomenda e entrega em todo o Brasil.</p><button class="btn" type="button" id="gift-quote">Solicitar proposta corporativa →</button><p style="font-size:12px">Quantidades, gravação, arte, preço e prazo sob confirmação · Imagens ilustrativas</p></div><svg viewBox="0 0 470 320" role="img" aria-label="Ilustração de caderno, caneta e caneca corporativos"><ellipse cx="247" cy="275" rx="194" ry="24" fill="#0a1830" opacity=".22"/><g transform="translate(65 45) rotate(-8 100 100)"><rect width="195" height="225" rx="12" fill="#eaf2ff"/><rect width="30" height="225" rx="8" fill="#1f75d5"/><rect x="48" y="45" width="120" height="10" rx="3" fill="#164779"/><rect x="48" y="64" width="87" height="6" rx="3" fill="#6496c9"/><path d="M30 180L195 96V225H30z" fill="#15365d"/></g><g transform="translate(284 144)"><rect x="0" y="0" width="117" height="115" rx="14" fill="#fff"/><path d="M117 22h23c32 0 32 66 0 66h-23" fill="none" stroke="#fff" stroke-width="16"/><rect x="0" y="72" width="117" height="43" rx="10" fill="#2680e6"/><path d="M0 74L117 34V75L0 110z" fill="#114579"/><circle cx="56" cy="44" r="17" fill="#277fe7"/></g><g transform="rotate(-21 320 244)"><rect x="212" y="266" width="228" height="13" rx="5" fill="#e4f0ff"/><rect x="212" y="266" width="66" height="13" rx="5" fill="#2d83e6"/><path d="M440 266l24 6.5-24 6.5z" fill="#ccd9e9"/></g></svg></div><div class="flexhead"><div><h2>Escolha a linha de brindes</h2><p class="muted">Personalize com logomarca, identidade visual e mensagem corporativa. Consulte o catálogo abaixo para produtos e kits sob encomenda.</p></div></div><div class="gift-categories"><div class="gift-cat"><h3>☕ Copos e canecas</h3><p>Canecas, copos personalizados e brindes para equipes.</p><button type="button" data-gift="Canecas e copos">Solicitar orçamento →</button></div><div class="gift-cat"><h3>✒️ Escritório</h3><p>Canetas, blocos, agendas, cadernos e calendários.</p><button type="button" data-gift="Brindes de escritório">Solicitar orçamento →</button></div><div class="gift-cat"><h3>🎁 Kits empresariais</h3><p>Boas-vindas, eventos, datas comemorativas e campanhas.</p><button type="button" data-gift="Kits corporativos">Montar um kit →</button></div></div><p class="hint">As opções são demonstrativas e estão sujeitas à disponibilidade, técnicas de personalização e quantidade mínima confirmada no orçamento.</p></section><section class="band"><div class="wrap section" id="como"><div class="eyebrow">Simples e transparente</div><h2>Como funciona</h2><div class="steps"><div class="step"><b>01</b><h3>Escolha</h3><p>Selecione o produto e nos informe quantidades e acabamento.</p></div><div class="step"><b>02</b><h3>Personalize</h3><p>Envie sua arte pronta ou solicite criação personalizada.</p></div><div class="step"><b>03</b><h3>Aprove</h3><p>Confira a prova e confirme o orçamento antes da fabricação.</p></div><div class="step"><b>04</b><h3>Receba</h3><p>Produção sob encomenda e envio conforme prazo confirmado.</p></div></div></div></section>
+<main>
+<section class="wrap section" id="natal" aria-labelledby="natal-title">
+  <div class="natal-feature">
+    <div>
+      <h2 id="natal-title">Natal personalizado</h2>
+      <p>Vista suas garrafas para as festas e personalize sacolas, embalagens e lembranças com a identidade da sua marca.</p>
+      <a class="btn" id="ver-colecao-natal" href="#produtos">Ver produtos de Natal</a>
+    </div>
+    <img src="/assets/soartes-natal-kraft.webp" alt="Amostra ilustrativa de adesivo natalino em sacola kraft" loading="lazy" decoding="async">
+  </div>
+</section>
+<section class="wrap section" id="produtos"><div class="flexhead"><div><div class="eyebrow">Catálogo SóArtes</div><h2>Impressos que valorizam sua marca</h2><p class="muted">Escolha quantidade e preparação de arte. Os preços são estimativas comerciais sujeitas à conferência antes do pagamento; o frete será cotado para seu CEP.</p></div><input class="search" id="search" placeholder="Buscar produto..." aria-label="Buscar produto"></div><div class="filters" id="filters"></div><div class="catalog-toolbar"><span id="catalog-count" class="catalog-status" aria-live="polite"></span><label>Organizar: <select id="sort-products"><option value="featured">Destaques</option><option value="alpha">Nome A–Z</option><option value="priced">Com preço primeiro</option><option value="quote">Sob consulta primeiro</option></select></label></div><div class="grid" id="catalog"></div><div class="trust-strip"><div><strong>Arte sob aprovação</strong>Arquivo revisado antes da produção.</div><div><strong>Frete confirmado</strong>Cálculo validado para o CEP antes do pagamento.</div><div><strong>Pedido acompanhado</strong>Atendimento humano durante a encomenda.</div></div><p class="hint">Imagens demonstrativas em alta definição, não fotografias de amostras fabricadas. Antes da compra, confirme especificações, materiais, personalização, quantidade mínima, prazo e frete.</p></section><section class="wrap section" id="brindes"><div class="eyebrow">Novidade · Soluções empresariais</div><div class="gift-feature"><div><div class="eyebrow">Brindes Corporativos SóArtes</div><h2>Sua marca presente em cada detalhe.</h2><p>Brindes para equipes, lembranças para clientes, eventos e ações de fim de ano. Personalização com a identidade da sua empresa, produção sob encomenda e entrega em todo o Brasil.</p><button class="btn" type="button" id="gift-quote">Solicitar proposta corporativa →</button><p style="font-size:12px">Quantidades, gravação, arte, preço e prazo sob confirmação · Imagens ilustrativas</p></div><svg viewBox="0 0 470 320" role="img" aria-label="Ilustração de caderno, caneta e caneca corporativos"><ellipse cx="247" cy="275" rx="194" ry="24" fill="#0a1830" opacity=".22"/><g transform="translate(65 45) rotate(-8 100 100)"><rect width="195" height="225" rx="12" fill="#eaf2ff"/><rect width="30" height="225" rx="8" fill="#1f75d5"/><rect x="48" y="45" width="120" height="10" rx="3" fill="#164779"/><rect x="48" y="64" width="87" height="6" rx="3" fill="#6496c9"/><path d="M30 180L195 96V225H30z" fill="#15365d"/></g><g transform="translate(284 144)"><rect x="0" y="0" width="117" height="115" rx="14" fill="#fff"/><path d="M117 22h23c32 0 32 66 0 66h-23" fill="none" stroke="#fff" stroke-width="16"/><rect x="0" y="72" width="117" height="43" rx="10" fill="#2680e6"/><path d="M0 74L117 34V75L0 110z" fill="#114579"/><circle cx="56" cy="44" r="17" fill="#277fe7"/></g><g transform="rotate(-21 320 244)"><rect x="212" y="266" width="228" height="13" rx="5" fill="#e4f0ff"/><rect x="212" y="266" width="66" height="13" rx="5" fill="#2d83e6"/><path d="M440 266l24 6.5-24 6.5z" fill="#ccd9e9"/></g></svg></div><div class="flexhead"><div><h2>Escolha a linha de brindes</h2><p class="muted">Personalize com logomarca, identidade visual e mensagem corporativa. Consulte o catálogo abaixo para produtos e kits sob encomenda.</p></div></div><div class="gift-categories"><div class="gift-cat"><h3>☕ Copos e canecas</h3><p>Canecas, copos personalizados e brindes para equipes.</p><button type="button" data-gift="Canecas e copos">Solicitar orçamento →</button></div><div class="gift-cat"><h3>✒️ Escritório</h3><p>Canetas, blocos, agendas, cadernos e calendários.</p><button type="button" data-gift="Brindes de escritório">Solicitar orçamento →</button></div><div class="gift-cat"><h3>🎁 Kits empresariais</h3><p>Boas-vindas, eventos, datas comemorativas e campanhas.</p><button type="button" data-gift="Kits corporativos">Montar um kit →</button></div></div><p class="hint">As opções são demonstrativas e estão sujeitas à disponibilidade, técnicas de personalização e quantidade mínima confirmada no orçamento.</p></section><section class="band"><div class="wrap section" id="como"><div class="eyebrow">Simples e transparente</div><h2>Como funciona</h2><div class="steps"><div class="step"><b>01</b><h3>Escolha</h3><p>Selecione o produto e nos informe quantidades e acabamento.</p></div><div class="step"><b>02</b><h3>Personalize</h3><p>Envie sua arte pronta ou solicite criação personalizada.</p></div><div class="step"><b>03</b><h3>Aprove</h3><p>Confira a prova e confirme o orçamento antes da fabricação.</p></div><div class="step"><b>04</b><h3>Receba</h3><p>Produção sob encomenda e envio conforme prazo confirmado.</p></div></div></div></section>
 <section class="wrap section two" id="arte"><div><div class="eyebrow">Estúdio criativo</div><h2>Sua ideia, uma arte com personalidade.</h2><p class="muted">Conte para a equipe o que você precisa. Podemos avaliar a criação, adaptação ou revisão de sua arte e apresentar um orçamento personalizado.</p><div class="notice">A geração automática de artes por IA e a aprovação automática por WhatsApp ainda não estão ativas. Esta versão recebe solicitações para atendimento humano.</div></div><form id="brief" class="brief"><label>Nome ou empresa<input id="name" required maxlength="100" placeholder="Nome do negócio"></label><label>O que deseja criar?<select id="kind"><option>Cartão de visita</option><option>Panfleto</option><option>Adesivo ou etiqueta</option><option>Banner</option><option>Arte digital</option><option>Outro</option></select></label><label>Descreva a ideia<textarea id="description" required maxlength="1000" rows="5" placeholder="Cores, estilo, textos e medidas desejadas"></textarea></label><button class="btn" type="submit">Enviar briefing pelo WhatsApp ↗</button><small>O conteúdo será aberto no WhatsApp para revisão antes do envio.</small></form></section>
 <section class="band" id="frete"><div class="wrap section"><div class="eyebrow">Envio diretamente da produção</div><h2>Seu pedido chega onde você estiver.</h2><div class="shipgrid"><div class="shipcard"><h3>Calcular entrega</h3><p class="muted">Para um orçamento completo, adicione o produto ao carrinho e informe o CEP. O transporte será cotado após a confirmação da configuração e do volume produzido.</p><label>CEP de destino<input id="ship-cep" inputmode="numeric" maxlength="9" placeholder="00000-000"></label><button class="btn" id="ship-to-cart" type="button">Usar CEP no carrinho</button></div><div class="shipcard"><h3>Como calculamos o prazo</h3><div class="delivery-status"><strong>Preparação e aprovação da arte</strong>Depende da modalidade escolhida e da sua aprovação.</div><div class="delivery-status"><strong>Produção dos impressos</strong>O prazo começa depois da aprovação da arte e do pagamento.</div><div class="delivery-status"><strong>Entrega e transporte</strong>O frete e o prazo do transportador são informados na confirmação do orçamento.</div><p class="hint">A previsão de entrega é uma estimativa e pode variar por volume de produção, liberação de arquivo, feriados e transporte. A SóArtes informa a previsão revisada antes da contratação.</p></div></div></div></section><section class="wrap section" id="duvidas"><div class="eyebrow">Dúvidas frequentes</div><h2>Antes de encomendar</h2><details><summary>Os preços estão confirmados?</summary><p>Os preços por quantidade são referências comerciais. O pedido só será confirmado após verificar custo, arte, frete e prazo total.</p></details><details><summary>A loja já aceita pagamento online?</summary><p>Ainda não. O PagBank/PagSeguro foi escolhido para o checkout futuro, mas a integração e homologação de pagamentos ainda não estão ativas. Esta é uma vitrine de orçamento pelo WhatsApp.</p></details><details><summary>Como funciona a produção?</summary><p>A SóArtes organiza a criação, a fabricação e a entrega por meio de sua rede de produção. As especificações e a disponibilidade serão confirmadas antes de cada pedido.</p></details><details><summary>Qual o prazo de entrega?</summary><p>O prazo total combina preparação e aprovação da arte, produção e envio. Antes do pagamento confirmamos a estimativa considerando a disponibilidade e o volume de produção.</p></details></section></main>
 <div id="cart-shade" class="cart-shade" hidden></div><aside id="cart-sheet" class="cart-sheet" role="dialog" aria-modal="true" aria-label="Carrinho de compras" hidden><div class="sheet-top"><h2>Seu carrinho</h2><button type="button" id="close-cart" aria-label="Fechar carrinho">✕</button></div><p class="muted">Confira os itens e informe o CEP. O orçamento final incluirá o frete confirmado antes de qualquer pagamento.</p><div class="delivery-status"><strong>1. Monte seu pedido</strong>Escolha produtos e serviço de arte.<strong style="margin-top:8px">2. Solicite a entrega</strong>Informe CEP e data desejada.<strong style="margin-top:8px">3. Aprove e pague</strong>A equipe confirma arte, frete, prazo e pagamento.</div><div id="cart-list"></div><button type="button" id="clear-cart" class="text-action">Esvaziar carrinho</button><label class="prod-option">CEP de entrega<input id="cart-cep" inputmode="numeric" maxlength="9" autocomplete="postal-code" placeholder="00000-000"></label><label class="prod-option">Data desejada para receber (opcional)<input type="date" id="cart-needed"></label><label class="prod-option">Orientações para criação ou correção de arte (opcional)<textarea id="cart-notes" maxlength="300" rows="3" placeholder="Cores, estilo e alterações desejadas. Não informe dados sensíveis."></textarea></label><div id="cart-delivery" class="delivery-status"></div><div id="cart-totals" class="totals"></div><button type="button" class="btn full" id="checkout">Solicitar fechamento pelo WhatsApp</button><p class="hint">Orçamento sem cobrança automática. O frete, o prazo e o preço definitivo serão confirmados antes do pagamento. O carrinho fica salvo apenas neste navegador; observações seguem somente na mensagem para atendimento.</p></aside><footer><div class="wrap foot"><div><div class="brand">Só<span>Artes</span></div><p>Design que destaca seu negócio.</p></div><div><b>Atendimento</b><p>WhatsApp: (16) 98183-9138<br>Araraquara/SP · Atendemos online</p></div><div><b>Informações</b><p><a href="/politica.html">Privacidade e condições</a><br>Ambiente de demonstração · Não recebe pagamentos</p></div></div></footer>
@@ -71,9 +90,101 @@ const unpriced=[
  {id:"caderno-corp",cat:"Brindes corporativos",name:"Cadernos e agendas",desc:"Papelaria empresarial personalizada em diferentes formatos."},
  {id:"calendario-corp",cat:"Brindes corporativos",name:"Calendários de mesa",desc:"Modelos de mesa personalizados, incluindo opções com Wire-o e base de papel-cartão. Prazo e formato conforme orçamento."},
  {id:"kit-onboard",cat:"Brindes corporativos",name:"Kit de boas-vindas",desc:"Composição de caderno, caneta e caneca. Itens e viabilidade confirmados no orçamento."},
- {id:"kit-evento",cat:"Brindes corporativos",name:"Kit para eventos e congressos",desc:"Conjunto sob medida com bloco/caderno, credencial, caneta ou calendário."}
+ {id:"kit-evento",cat:"Brindes corporativos",name:"Kit para eventos e congressos",desc:"Conjunto sob medida com bloco/caderno, credencial, caneta ou calendário."},
+ {"id": "rotulo-vinho", "cat": "Rótulos", "name": "Rótulos personalizados para garrafas de vinho", "desc": "Personalize com sua marca, mensagem ou arte de Natal. Informe as medidas da área de aplicação e a quantidade. Venda somente do rótulo."},
+ {"id": "rotulo-cerveja", "cat": "Rótulos", "name": "Rótulos personalizados para garrafas de cerveja", "desc": "Para long neck e outros formatos. Informe o tamanho da garrafa e se o rótulo terá contato com gelo ou condensação para cotarmos o material adequado. Venda somente do rótulo."},
+ {"id": "adesivo-kraft", "cat": "Adesivos", "name": "Adesivo Couchê para sacola kraft", "desc": "Adesivo de papel Couchê para decorar ou fechar sacolas kraft de Natal. Tamanho, formato e quantidade sob consulta. Venda somente do adesivo."},
+ {"id": "tag-agradecimento", "cat": "Tags e cartões", "name": "Tag de agradecimento de Natal", "desc": "Tag impressa para pendurar em sacolas e presentes, com mensagem personalizada. Informe tamanho, quantidade e se deseja furo para amarração."},
+ {"id": "card-brinde", "cat": "Tags e cartões", "name": "Card de agradecimento com espaço para brinde", "desc": "Cartão impresso com área reservada para colar um brinde. Informe as medidas do item que será fixado para ajustarmos a arte. Venda somente do card."},
+ {"id": "adesivo-embalagem", "cat": "Adesivos", "name": "Adesivos para embalagens diversas", "desc": "Para caixas, potes, envelopes e sacolas. Informe o tipo de embalagem, as medidas, a quantidade e as condições de uso. Material e acabamento sob consulta."}
 ];
-const productTags={"couche":["Personalizado","Impressos"],"premium-fosco":["Premium","Verniz localizado","Corte especial"],"vinil":["Personalizado","Adesivos"],"vinilbranco":["Personalizado","Adesivos"],"banners":["Comunicação visual","Grande formato"],"flyers":["Impressos","Divulgação"],"etiquetas":["Adesivos","Personalizado"],"design":["Criação digital"],"caneca-corp":["Corporativo","Brindes"],"copo-corp":["Corporativo","Brindes"],"canetas-corp":["Corporativo","Brindes"],"caderno-corp":["Corporativo","Brindes"],"calendario-corp":["Corporativo","Brindes"],"kit-onboard":["Corporativo","Sob encomenda"],"kit-evento":["Corporativo","Sob encomenda"]};
+const productTags={
+  "couche": [
+    "Personalizado",
+    "Impressos"
+  ],
+  "premium-fosco": [
+    "Premium",
+    "Verniz localizado",
+    "Corte especial"
+  ],
+  "vinil": [
+    "Personalizado",
+    "Adesivos"
+  ],
+  "vinilbranco": [
+    "Personalizado",
+    "Adesivos"
+  ],
+  "banners": [
+    "Comunicação visual",
+    "Grande formato"
+  ],
+  "flyers": [
+    "Impressos",
+    "Divulgação"
+  ],
+  "etiquetas": [
+    "Adesivos",
+    "Personalizado"
+  ],
+  "design": [
+    "Criação digital"
+  ],
+  "caneca-corp": [
+    "Corporativo",
+    "Brindes"
+  ],
+  "copo-corp": [
+    "Corporativo",
+    "Brindes"
+  ],
+  "canetas-corp": [
+    "Corporativo",
+    "Brindes"
+  ],
+  "caderno-corp": [
+    "Corporativo",
+    "Brindes"
+  ],
+  "calendario-corp": [
+    "Corporativo",
+    "Brindes"
+  ],
+  "kit-onboard": [
+    "Corporativo",
+    "Sob encomenda"
+  ],
+  "kit-evento": [
+    "Corporativo",
+    "Sob encomenda"
+  ],
+  "rotulo-vinho": [
+    "Vinho",
+    "Natal"
+  ],
+  "rotulo-cerveja": [
+    "Cerveja",
+    "Natal"
+  ],
+  "adesivo-kraft": [
+    "Papel Couchê",
+    "Sacola kraft",
+    "Natal"
+  ],
+  "tag-agradecimento": [
+    "Agradecimento",
+    "Natal"
+  ],
+  "card-brinde": [
+    "Agradecimento",
+    "Natal"
+  ],
+  "adesivo-embalagem": [
+    "Embalagens",
+    "Natal"
+  ]
+};
 const premiumQuantities=[500,1000,5000];
 const premiumCuts=["Cantos retos (refile)","2 cantos arredondados","4 cantos arredondados","Corte especial personalizado"];
 const productAssets={
@@ -91,7 +202,13 @@ const productAssets={
   "flyers": "soartes-panfletos-2027.webp",
   "design": "soartes-artes-digitais-2027.webp",
   "kit-onboard": "soartes-kit-boas-vindas-2027.webp",
-  "kit-evento": "soartes-kit-eventos-2027.webp"
+  "kit-evento": "soartes-kit-eventos-2027.webp",
+  "rotulo-vinho": "soartes-natal-vinho.webp",
+  "rotulo-cerveja": "soartes-natal-cerveja.webp",
+  "adesivo-kraft": "soartes-natal-kraft.webp",
+  "tag-agradecimento": "soartes-natal-tag.webp",
+  "card-brinde": "soartes-natal-card.webp",
+  "adesivo-embalagem": "soartes-natal-embalagens.webp"
 };
 const money=n=>Number(n.toFixed(2)).toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
 const deliveryText=n=>n===null?"Prazo de produção a confirmar":n+" dias úteis de produção após aprovação de arte e pagamento; transporte adicional a confirmar";
@@ -103,13 +220,13 @@ function productPhoto(id,name){
 let cart=[];
 try{const saved=JSON.parse(localStorage.getItem("soartes_cart_v2")||"[]");if(Array.isArray(saved))cart=saved.filter(x=>catalogData.some(p=>p.id===x.id)&&Number.isInteger(x.qty)&&artOptions.some(a=>a[0]===x.art)&&Number.isInteger(x.packs)&&x.packs>=1&&x.packs<=30).slice(0,60)}catch(e){}
 function persist(){try{localStorage.setItem("soartes_cart_v2",JSON.stringify(cart))}catch(e){}document.getElementById("cart-count").textContent=cart.reduce((n,x)=>n+x.packs,0)}
-const categories=["Todos",...new Set([...catalogData,...unpriced].map(p=>p.cat))];let category="Todos";
+const categories=["Todos","Natal",...new Set([...catalogData,...unpriced].map(p=>p.cat))];let category="Todos";
 function makeCatalog(){
  const q=(document.getElementById("search").value||"").toLocaleLowerCase("pt-BR").trim();
  const filters=document.getElementById("filters");
  filters.innerHTML=categories.map(c=>'<button type="button" data-category="'+c+'" class="'+(category===c?'active':'')+'">'+c+'</button>').join("");
  filters.querySelectorAll("button").forEach(b=>b.onclick=()=>{category=b.dataset.category;makeCatalog()});
- const cards=[...catalogData,...unpriced].filter(p=>(category==="Todos"||p.cat===category)&&(p.name+" "+p.desc+" "+(productTags[p.id]||[]).join(" ")).toLocaleLowerCase("pt-BR").includes(q));
+ const cards=[...catalogData,...unpriced].filter(p=>(category==="Todos"||p.cat===category||(category==="Natal"&&(productTags[p.id]||[]).includes("Natal")))&&(p.name+" "+p.desc+" "+(productTags[p.id]||[]).join(" ")).toLocaleLowerCase("pt-BR").includes(q));
  const sort=document.getElementById("sort-products").value;
  if(sort==="alpha")cards.sort((a,b)=>a.name.localeCompare(b.name,"pt-BR"));
  else if(sort==="priced")cards.sort((a,b)=>Number(!!b.opts)-Number(!!a.opts));
@@ -164,6 +281,11 @@ function renderCart(){
  document.getElementById("cart-delivery").innerHTML=cart.length?'<strong>Estimativa de fabricação</strong>'+ (cart.every(e=>catalogData.find(p=>p.id===e.id).prodDays===3)?'Referência de 3 dias úteis de produção após aprovação de arte e pagamento, sujeita a volume e confirmação operacional.':'O prazo de produção será confirmado por produto após aprovação de arte e pagamento.')+'<br><small>Acrescentar tempo de criação/revisão e entrega, ainda não cotados.</small>':'<strong>Prazo de entrega</strong>Selecione produtos para consultar uma estimativa.';
 }
 function whatsapp(message){window.open("https://wa.me/5516981839138?text="+encodeURIComponent(message),"_blank","noopener,noreferrer")}
+document.getElementById("ver-colecao-natal").addEventListener("click",()=>{
+ category="Natal";
+ document.getElementById("search").value="";
+ makeCatalog();
+});
 document.getElementById("search").addEventListener("input",makeCatalog);
 document.getElementById("sort-products").addEventListener("change",makeCatalog);
 document.getElementById("gift-quote").onclick=()=>whatsapp("Olá, SóArtes! Quero uma proposta de brindes corporativos. Preciso definir produtos, quantidades, personalização, arte e prazo de entrega.");
