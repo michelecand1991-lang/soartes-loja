@@ -47,3 +47,15 @@ O pacote ZIP de fonte inclui os arquivos disponíveis em `public` na branch indi
 - [ ] Aprovação para sair do modo piloto registrada.
 ## Preservação
 Não desligar, pausar, excluir ou migrar outras plataformas para separar este projeto. Não alterar configurações globais do Supabase compartilhado sem inventário das URLs, SMTP, quotas e usuários dos demais sites.
+
+## Atendimento manual e frete
+
+- Impressos comuns: cotar na FuturaIM com a configuração do produto e o CEP de destino. Confirmar a viabilidade na conta antes de oferecer envio direto.
+- Kit com montagem em caixa presenteável: cotar FuturaIM até Araraquara e, à parte, repostagem de Araraquara ao cliente. Somar os dois trechos na linha de frete do orçamento e acrescentar o prazo de montagem. A mão de obra e os materiais da montagem pertencem ao custo do kit.
+- Enviar as mensagens abaixo pela conversa oficial, preenchendo os campos para cada pedido.
+
+**Aviso de cobrança** — Olá, [cliente]. O orçamento [referência] foi aprovado. Produtos e arte: R$ [valor]. Frete: R$ [valor]. Total: R$ [total]. Prazo combinado: [prazo]. Pagamento: [link PagBank ou dados Pix]. Avisaremos assim que conferirmos o recebimento.
+
+**Confirmação do pedido** — Oi, [cliente]. Conferimos o pagamento de R$ [valor]. Seu pedido [referência] está confirmado. A arte está [status]. A previsão de despacho é [data]. Vamos atualizar você por aqui.
+
+**Acompanhamento** — Pedido [referência], etapa atual: [em produção / em montagem / despachado / entregue]. Previsão atualizada: [data]. Rastreio, se disponível: [código ou link]. Se precisar falar com a SóArtes sobre a entrega, responda a esta mensagem.
