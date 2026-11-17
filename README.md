@@ -1,6 +1,6 @@
 # SóArtes Design Gráfico
 
-Vitrine pública de demonstração: orçamento via WhatsApp, sem pagamento automático. Design azul, preto e cinza.
+Vitrine pública com orçamento e fechamento manual pelo WhatsApp. Design azul, preto e cinza.
 
 Hospedagem: Render Static Site (`public/`). Não incluir custos da FuturaIM, dados de clientes ou segredos.
 # SóArtes — Dossiê de entrega do piloto e migração
@@ -13,6 +13,13 @@ Atualizado: 2026-11-16. **Estado contratual:** PILOTO de apresentação/homologa
 - Endereço de demonstração: https://soartes-loja.onrender.com.
 - Infraestrutura/dados: Banco e provedores externos: conferir configuração própria antes da migração..
 - Observação importante: Código de produção pode depender de assets ou serviços não versionados; exportar cadastros/arte separadamente.
+## Fechamento manual de pedidos
+
+1. No WhatsApp oficial, confirme quantidades, acabamento, aprovação da arte, valor total com frete e prazo.
+2. Envie o link do PagBank gerado para o valor combinado ou encaminhe os dados Pix da conta da loja.
+3. Confira a aprovação no PagBank ou o crédito no extrato Pix antes de liberar a produção.
+4. Registre o pedido e comunique ao cliente a confirmação e o envio pelo WhatsApp.
+
 ## Regra de independência
 Este projeto tem lógica, apresentação, autorização de acesso e plano de migração próprios. O compartilhamento atual de banco, autenticação ou repositório é temporário; **não interpretar como isolamento de produção**. Não criar dependência direta de outras tabelas/módulos durante o piloto. O MICHELE OS poderá receber integrações controladas no futuro, não credenciais administrativas irrestritas.
 ## Entrega do código
