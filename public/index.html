@@ -19,12 +19,9 @@
 @media(max-width:540px){.gift-categories{grid-template-columns:1fr}.gift-feature{padding:24px}}
 .product-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:3px}.product-tags span{font-size:10px;font-weight:750;color:#235ca2;background:#eaf2fe;border:1px solid #d6e5fa;border-radius:999px;padding:5px 9px}.premium-option-note{background:#eff5fc;border-radius:9px;padding:10px 12px;margin:5px 0;color:#50637b;font-size:12px;line-height:1.5}
 
-.mock.photo-container{height:208px;position:relative;overflow:hidden;background:#edf2fa;}
-.mock.photo-container img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
-.product:hover .mock.photo-container img{transform:scale(1.045)}
+.mock.photo-container{height:auto;aspect-ratio:5/4;position:relative;overflow:hidden;background:#e8e8e8;}
+.mock.photo-container img{width:100%;height:100%;object-fit:contain;display:block}
 .photo-label{position:absolute;bottom:10px;left:10px;color:#183c68;background:rgba(255,255,255,.94);border:1px solid #dde7f2;border-radius:8px;padding:5px 9px;font-size:10px;font-weight:700;letter-spacing:.02em}
-.photo-fallback{display:block;width:100%;height:100%}.photo-fallback[hidden]{display:none}
-.product-visual{width:100%;height:100%;background-repeat:no-repeat;background-color:#eef2f7}.mock.photo-container{height:235px}
 
 .catalog-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:2px 0 18px}.catalog-toolbar select{background:#fff;border:1px solid #ced9e9;border-radius:10px;padding:10px 14px;color:#213852}.catalog-toolbar small{color:#53657d}.catalog-status{font-size:13px;color:#4e6178}.cart-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:9px 0}.cart-controls label{font-size:12px;color:#4e6178;display:flex;align-items:center;gap:8px}.cart-controls input{width:75px;border:1px solid #c9d8ea;border-radius:8px;padding:7px}.text-action{border:0;background:transparent;color:#a32d2d;text-decoration:underline;cursor:pointer;font-size:13px;padding:8px 0}.trust-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 0}.trust-strip div{background:#fff;border:1px solid #dfebf6;border-radius:12px;padding:12px;color:#375372;font-size:13px;line-height:1.5}.trust-strip strong{display:block;color:#21466d;margin-bottom:2px}
 @media(max-width:620px){.trust-strip{grid-template-columns:1fr}}
@@ -57,23 +54,22 @@ const unpriced=[
 const productTags={"couche":["Personalizado","Impressos"],"premium-fosco":["Premium","Verniz localizado","Corte especial"],"vinil":["Personalizado","Adesivos"],"vinilbranco":["Personalizado","Adesivos"],"banners":["Comunicação visual","Grande formato"],"flyers":["Impressos","Divulgação"],"etiquetas":["Adesivos","Personalizado"],"design":["Criação digital"],"caneca-corp":["Corporativo","Brindes"],"copo-corp":["Corporativo","Brindes"],"canetas-corp":["Corporativo","Brindes"],"caderno-corp":["Corporativo","Brindes"],"calendario-corp":["Corporativo","Brindes"],"kit-onboard":["Corporativo","Sob encomenda"],"kit-evento":["Corporativo","Sob encomenda"]};
 const premiumQuantities=[500,1000,5000];
 const premiumCuts=["Cantos retos (refile)","2 cantos arredondados","4 cantos arredondados","Corte especial personalizado"];
-const productAssets={"couche":"cartoes-realistas.svg","premium-fosco":"cartao-premium.svg","vinil":"adesivos-transparentes.svg","vinilbranco":"adesivos-vinil.svg","flyers":"folhetos.svg","banners":"banner-rollup.svg","etiquetas":"adesivos-vinil.svg","design":"arte-digital.svg","caneca-corp":"caneca-personalizada.svg","copo-corp":"copo-termico.svg","canetas-corp":"canetas-corporativas.svg","caderno-corp":"caderno-espiral.svg","calendario-corp":"calendario-mesa.svg","kit-onboard":"kit-boas-vindas.svg","kit-evento":"kit-eventos.svg"};
+const productAssets={
+  "premium-fosco": "amostra-cartao-premium-3fb9d419.webp",
+  "banners": "amostra-banner-rollup-cf055c1b.webp",
+  "etiquetas": "amostra-adesivos-vinil-90a1de01.webp",
+  "caneca-corp": "amostra-caneca-personalizada-1e4fb427.webp",
+  "copo-corp": "amostra-caneca-personalizada-1e4fb427.webp",
+  "canetas-corp": "amostra-canetas-corporativas-b0a897c4.webp",
+  "caderno-corp": "amostra-caderno-espiral-ad6af0ab.webp",
+  "calendario-corp": "amostra-calendario-mesa-8308fbb0.webp"
+};
 const money=n=>Number(n.toFixed(2)).toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
 const deliveryText=n=>n===null?"Prazo de produção a confirmar":n+" dias úteis de produção após aprovação de arte e pagamento; transporte adicional a confirmar";
 function productPhoto(id,name){
  const file=productAssets[id];
- if(!file)return '<div class="mock photo-container"><span class="photo-fallback">'+mockup(id)+'</span><span class="photo-label">Ilustração demonstrativa</span></div>';
- return '<div class="mock photo-container"><img src="/assets/'+file+'" loading="lazy" decoding="async" alt="Representação ilustrativa do produto '+name+'" style="width:100%;height:100%;object-fit:contain;background:#f1f5fa"><span class="photo-label">Imagem ilustrativa</span></div>';
-}
-function mockup(id){
- const blue="#267ce5",dark="#152f50";
- if(id==="premium-fosco")return '<svg viewBox="0 0 440 295" role="img" aria-label="Simulação ilustrativa do cartão fosco com verniz localizado e cantos arredondados"><rect width="440" height="295" fill="#e8eff8"/><ellipse cx="223" cy="252" rx="145" ry="22" fill="#b8c8dc"/><g transform="translate(76 56) rotate(-8 140 85)"><rect width="279" height="174" rx="19" fill="#ffffff" stroke="#bccbdd" stroke-width="2"/><path d="M0 19 Q0 0 19 0 H260 Q279 0 279 19 V57 L0 153Z" fill="#173963"/><path d="M0 153 L279 57 V155 Q279 174 260 174 H19 Q0 174 0 155Z" fill="#276ede"/><path d="M20 130 L255 44" stroke="#8bc4ff" stroke-width="6" opacity=".8"/><circle cx="232" cy="29" r="13" fill="#f6faff" opacity=".92"/></g><g transform="translate(128 114) rotate(8 120 77)"><rect width="244" height="142" rx="17" fill="#f7f9fd" stroke="#cbd5e3" stroke-width="2"/><path d="M0 72 L244 0 V49 L0 121Z" fill="#2a7ee2" opacity=".95"/><path d="M0 121 L244 49 V142 H0Z" fill="#132e53"/><path d="M28 28 H121" stroke="#416997" stroke-width="8" stroke-linecap="round"/></g></svg>';
- const gift=String(id).includes("corp")||String(id).startsWith("kit-");
- if(gift)return '<svg viewBox="0 0 440 295" role="img" aria-label="Ilustração de brinde corporativo"><rect width="440" height="295" fill="#e7eef8"/><ellipse cx="216" cy="251" rx="138" ry="20" fill="#bccadf"/><rect x="112" y="49" width="142" height="186" rx="12" fill="#fff"/><path d="M112 49h142v66H112z" fill="#276fca"/><path d="M112 180h142v55H112z" fill="#122e51"/><path d="M254 128h24c47 0 47 66 0 66h-24" stroke="#fff" stroke-width="16" fill="none"/><rect x="270" y="155" width="96" height="81" rx="10" fill="#dce8f7"/><path d="M270 198h96v38h-96z" fill="#2177db"/><circle cx="318" cy="178" r="16" fill="#fff"/></svg>';
- const body= id==="vinil"||id==="vinilbranco" ? '<rect x="100" y="57" width="236" height="166" rx="18" fill="#d0dbe9"/><g fill="#fff" stroke="#cadae1" stroke-width="2"><circle cx="155" cy="104" r="36"/><circle cx="232" cy="104" r="36"/><circle cx="307" cy="104" r="36"/><circle cx="155" cy="178" r="36"/><circle cx="232" cy="178" r="36"/><circle cx="307" cy="178" r="36"/></g><g fill="'+blue+'"><circle cx="155" cy="104" r="22"/><circle cx="232" cy="104" r="22"/><circle cx="307" cy="104" r="22"/><circle cx="155" cy="178" r="22"/><circle cx="232" cy="178" r="22"/><circle cx="307" cy="178" r="22"/></g>' :
-
- '<g transform="translate(88 60) rotate(-9 110 80)"><rect width="240" height="147" rx="8" fill="#fff"/><path d="M0 0h240v45L0 118z" fill="'+dark+'"/><path d="M0 118l240-73v102H0z" fill="'+blue+'"/><rect x="19" y="21" width="87" height="7" fill="#fff"/></g><g transform="translate(141 115) rotate(7 110 80)"><rect width="234" height="146" rx="8" fill="#fff"/><path d="M0 0h234v45L0 115z" fill="'+blue+'"/><path d="M0 115l234-70v101H0z" fill="'+dark+'"/></g>';
- return '<svg viewBox="0 0 440 295" role="img" aria-label="Ilustração demonstrativa de '+id+'"><rect width="440" height="295" fill="#e4edf9"/><ellipse cx="225" cy="250" rx="150" ry="20" fill="#afbed2"/>'+body+'</svg>';
+ if(!file)return "";
+ return '<div class="mock photo-container"><img src="/assets/'+file+'" loading="lazy" decoding="async" alt="Amostra de '+name+'"><span class="photo-label">Imagem ilustrativa</span></div>';
 }
 let cart=[];
 try{const saved=JSON.parse(localStorage.getItem("soartes_cart_v2")||"[]");if(Array.isArray(saved))cart=saved.filter(x=>catalogData.some(p=>p.id===x.id)&&Number.isInteger(x.qty)&&artOptions.some(a=>a[0]===x.art)&&Number.isInteger(x.packs)&&x.packs>=1&&x.packs<=30).slice(0,60)}catch(e){}
