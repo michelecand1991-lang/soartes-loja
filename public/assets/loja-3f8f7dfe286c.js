@@ -246,7 +246,7 @@ function renderCart(){
  document.getElementById("cart-totals").innerHTML='<div><span>Produtos e preparação de arte</span><strong>'+money(sum)+'</strong></div><div><span>Frete</span><strong>A confirmar</strong></div><div class="sum"><span>Subtotal sem frete</span><strong>'+money(sum)+'</strong></div><p class="hint">O total final e a data prevista serão informados pelo atendimento após análise do CEP, da produção e da arte.</p>';
  document.getElementById("cart-delivery").innerHTML=cart.length?'<strong>Estimativa de fabricação</strong>'+ (cart.every(e=>catalogData.find(p=>p.id===e.id).prodDays===3)?'Referência de 3 dias úteis de produção após aprovação de arte e pagamento, sujeita a volume e confirmação operacional.':'O prazo de produção será confirmado por produto após aprovação de arte e pagamento.')+'<br><small>Acrescentar tempo de criação/revisão e entrega, ainda não cotados.</small>':'<strong>Prazo de entrega</strong>Selecione produtos para consultar uma estimativa.';
 }
-function whatsapp(message){window.open("https://wa.me/5516981839138?text="+encodeURIComponent(message),"_blank","noopener,noreferrer")}
+function whatsapp(message){window.open("https://wa.me/5516981911521?text="+encodeURIComponent(message),"_blank","noopener,noreferrer")}
 document.querySelectorAll("[data-catalog-category]").forEach(link=>{
  link.addEventListener("click",()=>{
   category=link.dataset.catalogCategory;
